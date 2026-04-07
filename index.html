@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayami — Fashion & Lifestyle</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>稀</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-logo">
+    <div class="logo-icon">稀</div>
+    <span class="logo-text">Haya<span>mi</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="category.html">Category</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-search-btn" onclick="window.location.href='search.html'" title="Search">🔍</button>
+    <button class="nav-cart-btn" onclick="window.location.href='cart.html'" title="Cart">
+      🛍️ <span class="cart-badge">0</span>
+    </button>
+    <button class="nav-hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- HERO SLIDER -->
+  <section class="hero-slider">
+    <div class="slide active slide-1">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#2d1b1b 50%,#3d2020 100%);"></div>
+      <div class="slide-overlay">
+        <div class="slide-content">
+          <span class="slide-badge">New Arrivals</span>
+          <h1 class="slide-title">Effortless<br><span>Elegance</span><br>Awaits You</h1>
+          <p class="slide-desc">Discover curated fashion that speaks your story. Premium quality, timeless style.</p>
+          <div class="slide-actions">
+            <a href="products.html" class="btn-primary">Shop Now ✨</a>
+            <a href="category.html" class="btn-outline">Browse Categories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide slide-2">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1414 0%,#2d1f18 50%,#3d2d20 100%);"></div>
+      <div class="slide-overlay">
+        <div class="slide-content">
+          <span class="slide-badge">Summer Sale</span>
+          <h1 class="slide-title">Up to <span>50% Off</span><br>This Season</h1>
+          <p class="slide-desc">Limited time offers on handpicked collections. Don't miss out on exclusive deals.</p>
+          <div class="slide-actions">
+            <a href="products.html" class="btn-primary">View Sale 🏷️</a>
+            <a href="products.html" class="btn-outline">All Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide slide-3">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#18181a 0%,#1d1a2d 50%,#2a2040 100%);"></div>
+      <div class="slide-overlay">
+        <div class="slide-content">
+          <span class="slide-badge">Premium Collection</span>
+          <h1 class="slide-title">Dress for<br><span>Your Best</span><br>Every Day</h1>
+          <p class="slide-desc">Our premium line brings you luxury fabrics and flawless craftsmanship.</p>
+          <div class="slide-actions">
+            <a href="products.html" class="btn-primary">Explore 💎</a>
+            <a href="about.html" class="btn-outline">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="slider-dot active" data-index="0"></button>
+      <button class="slider-dot" data-index="1"></button>
+      <button class="slider-dot" data-index="2"></button>
+    </div>
+
+    <div class="slider-arrows">
+      <button class="slider-arrow prev">↑</button>
+      <button class="slider-arrow next">↓</button>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <div class="features-strip">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-text">
+          <h4>Free Delivery</h4>
+          <p>On orders above ₹999. Fast & reliable shipping nationwide.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-text">
+          <h4>Easy Returns</h4>
+          <p>30-day hassle-free return policy on all products.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-text">
+          <h4>Secure Payment</h4>
+          <p>100% secure transactions with encrypted checkout.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💬</div>
+        <div class="feature-text">
+          <h4>24/7 Support</h4>
+          <p>Expert customer service available around the clock.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOP BY CATEGORY -->
+  <section class="categories-section">
+    <div class="section-header">
+      <span class="section-tag">Collections</span>
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-desc">Explore our carefully curated collections designed for every occasion and style.</p>
+    </div>
+    <div class="categories-grid" id="categories-grid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- LATEST PRODUCTS -->
+  <section class="products-section">
+    <div class="section-header">
+      <span class="section-tag">Just In</span>
+      <h2 class="section-title">Latest Products</h2>
+      <p class="section-desc">Fresh arrivals every week. Be the first to own our newest pieces.</p>
+    </div>
+    <div class="products-grid" id="latest-products-grid">
+      <!-- Injected by JS -->
+    </div>
+    <div class="section-footer">
+      <a href="products.html" class="view-all-btn">View All Products →</a>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section style="padding:80px 5%;background:var(--white);">
+    <div class="section-header">
+      <span class="section-tag">Why Hayami</span>
+      <h2 class="section-title">Crafted with Care,<br>Made to Last</h2>
+      <p class="section-desc">Every piece in our collection reflects our commitment to quality and sustainability.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:32px;">
+      <div style="text-align:center;padding:36px 24px;background:var(--off-white);border-radius:var(--radius-lg);">
+        <div style="font-size:40px;margin-bottom:16px;">🌿</div>
+        <h4 style="font-family:var(--font-display);font-size:18px;margin-bottom:10px;">Sustainable Fashion</h4>
+        <p style="color:var(--gray);font-size:14px;line-height:1.7;">Eco-friendly materials and ethical production processes in every product.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--off-white);border-radius:var(--radius-lg);">
+        <div style="font-size:40px;margin-bottom:16px;">⭐</div>
+        <h4 style="font-family:var(--font-display);font-size:18px;margin-bottom:10px;">Premium Quality</h4>
+        <p style="color:var(--gray);font-size:14px;line-height:1.7;">Only the finest fabrics and materials pass our strict quality standards.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--off-white);border-radius:var(--radius-lg);">
+        <div style="font-size:40px;margin-bottom:16px;">🎨</div>
+        <h4 style="font-family:var(--font-display);font-size:18px;margin-bottom:10px;">Unique Designs</h4>
+        <p style="color:var(--gray);font-size:14px;line-height:1.7;">Original designs created by our in-house team of talented designers.</p>
+      </div>
+      <div style="text-align:center;padding:36px 24px;background:var(--off-white);border-radius:var(--radius-lg);">
+        <div style="font-size:40px;margin-bottom:16px;">💝</div>
+        <h4 style="font-family:var(--font-display);font-size:18px;margin-bottom:10px;">Made with Love</h4>
+        <p style="color:var(--gray);font-size:14px;line-height:1.7;">Every stitch, every detail crafted with passion and attention to care.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div class="logo-icon">稀</div>
+        <span class="logo-text" style="font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--white);">Haya<span style="color:var(--coral);">mi</span></span>
+      </div>
+      <p>Curated fashion for the modern soul. Quality, style, and sustainability — all in one place.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">📸</a>
+        <a href="#" class="social-link">🐦</a>
+        <a href="#" class="social-link">📘</a>
+        <a href="#" class="social-link">📌</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Customer Care</h5>
+      <ul>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Returns & Exchange</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Newsletter</h5>
+      <p style="color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:16px;">Get exclusive offers & new arrivals straight to your inbox.</p>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="Your email address">
+        <button>Subscribe ✨</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>Hayami</span>. All rights reserved.</p>
+    <p>Made with ❤️ for <span>稀美</span> fashion lovers</p>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" title="Back to top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

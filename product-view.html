@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product View — Hayami</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>稀</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-logo">
+    <div class="logo-icon">稀</div>
+    <span class="logo-text">Haya<span>mi</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="category.html">Category</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-search-btn" onclick="window.location.href='search.html'" title="Search">🔍</button>
+    <button class="nav-cart-btn" onclick="window.location.href='cart.html'" title="Cart">
+      🛍️ <span class="cart-badge">0</span>
+    </button>
+    <button class="nav-hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="products.html">Products</a>
+      <span class="sep">›</span>
+      <span id="pv-title-bread">Product</span>
+    </div>
+    <h1 id="pv-title-banner">Product Details</h1>
+  </div>
+
+  <!-- PRODUCT VIEW -->
+  <section class="product-view-section">
+    <div class="product-view-grid">
+
+      <!-- GALLERY -->
+      <div class="product-gallery">
+        <div class="gallery-main">
+          <div class="placeholder-img ph-1" id="pv-img-class" style="width:100%;height:100%;font-size:96px;display:flex;align-items:center;justify-content:center;">
+            <span id="pv-emoji">🌸</span>
+          </div>
+        </div>
+        <div class="gallery-thumbs">
+          <div class="gallery-thumb active">
+            <div class="placeholder-img ph-1" style="width:100%;height:100%;font-size:28px;display:flex;align-items:center;justify-content:center;">🌸</div>
+          </div>
+          <div class="gallery-thumb">
+            <div class="placeholder-img ph-2" style="width:100%;height:100%;font-size:28px;display:flex;align-items:center;justify-content:center;">✨</div>
+          </div>
+          <div class="gallery-thumb">
+            <div class="placeholder-img ph-3" style="width:100%;height:100%;font-size:28px;display:flex;align-items:center;justify-content:center;">💎</div>
+          </div>
+          <div class="gallery-thumb">
+            <div class="placeholder-img ph-4" style="width:100%;height:100%;font-size:28px;display:flex;align-items:center;justify-content:center;">🌺</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT DETAIL -->
+      <div class="product-detail">
+        <div class="product-detail-category" id="pv-category">Category</div>
+        <h1 class="product-detail-title" id="pv-title">Product Name</h1>
+
+        <div class="product-detail-rating">
+          <span class="detail-stars" id="pv-rating-stars">★★★★★</span>
+          <span class="review-count" id="pv-reviews">(0 reviews)</span>
+        </div>
+
+        <div class="product-detail-price">
+          <span class="detail-price-current" id="pv-price">₹0</span>
+          <span class="detail-price-old" id="pv-old-price"></span>
+          <span class="detail-discount" id="pv-discount" style="display:none;">% OFF</span>
+        </div>
+
+        <p class="product-detail-desc">
+          A beautifully crafted piece made from premium materials. Designed for the modern woman who values both style and comfort. Perfect for everyday wear or special occasions. Our products are sustainably sourced and ethically produced.
+        </p>
+
+        <div class="product-options">
+          <div class="option-label">Size</div>
+          <div class="size-options">
+            <button class="size-btn active">XS</button>
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+        </div>
+
+        <div class="product-options" style="margin-top:20px;">
+          <div class="option-label">Color</div>
+          <div class="color-options">
+            <button class="color-btn active" style="background:#FF6B6B;" title="Coral"></button>
+            <button class="color-btn" style="background:#FFAB91;" title="Peach"></button>
+            <button class="color-btn" style="background:#F8BBD9;" title="Blush"></button>
+            <button class="color-btn" style="background:#1a1a1a;" title="Black"></button>
+            <button class="color-btn" style="background:#ffffff;border:2px solid #ddd;" title="White"></button>
+          </div>
+        </div>
+
+        <div class="quantity-add-row" style="margin-top:28px;">
+          <div class="qty-control">
+            <button class="qty-btn" id="pv-qty-minus">−</button>
+            <input class="qty-input" type="number" id="pv-qty" value="1" min="1">
+            <button class="qty-btn" id="pv-qty-plus">+</button>
+          </div>
+          <button class="add-to-cart-big" id="pv-add-cart">
+            🛍️ Add to Cart
+          </button>
+          <button class="wishlist-btn-big">❤️</button>
+        </div>
+
+        <div class="product-meta" style="margin-top:20px;display:flex;flex-direction:column;gap:8px;">
+          <div>SKU: <span>HYM-<script>document.write(Math.floor(Math.random()*90000)+10000)</script></span></div>
+          <div>Category: <span id="pv-meta-cat">—</span></div>
+          <div>Availability: <span style="color:#4CAF50;font-weight:600;">✓ In Stock</span></div>
+          <div>Delivery: <span>2–4 business days</span></div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:24px;padding-top:24px;border-top:1px solid var(--border);">
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray);">
+            <span style="font-size:16px;">🚚</span> Free delivery on ₹999+
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray);">
+            <span style="font-size:16px;">🔄</span> 30-day returns
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div class="related-section" style="padding:60px 0 0;">
+      <div class="section-header">
+        <span class="section-tag">You May Also Like</span>
+        <h2 class="section-title">Related Products</h2>
+      </div>
+      <div class="products-grid" id="related-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div class="logo-icon">稀</div>
+        <span style="font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--white);">Haya<span style="color:var(--coral);">mi</span></span>
+      </div>
+      <p>Curated fashion for the modern soul.</p>
+      <div class="social-links"><a href="#" class="social-link">📸</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">📘</a></div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="category.html">Categories</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Customer Care</h5><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">FAQ</a></li></ul></div>
+    <div class="footer-col"><h5>Newsletter</h5><div class="footer-newsletter"><input type="email" placeholder="Your email address"><button>Subscribe ✨</button></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>Hayami</span>. All rights reserved.</p></div>
+</footer>
+
+<button class="scroll-top">↑</button>
+
+<script src="js/script.js"></script>
+<script>
+  // Update breadcrumb and banner title
+  document.addEventListener('DOMContentLoaded', () => {
+    const title = document.getElementById('pv-title')?.textContent;
+    if (title && document.getElementById('pv-title-bread')) {
+      document.getElementById('pv-title-bread').textContent = title;
+      document.getElementById('pv-title-banner').textContent = title;
+    }
+    // Meta category
+    const cat = document.getElementById('pv-category')?.textContent;
+    if (cat && document.getElementById('pv-meta-cat')) {
+      document.getElementById('pv-meta-cat').textContent = cat;
+    }
+    // Size buttons
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+    // Color buttons
+    document.querySelectorAll('.color-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+</script>
+</body>
+</html>

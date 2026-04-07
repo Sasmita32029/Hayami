@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — Hayami</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>稀</text></svg>">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-logo">
+    <div class="logo-icon">稀</div>
+    <span class="logo-text">Haya<span>mi</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="category.html">Category</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-search-btn" onclick="window.location.href='search.html'">🔍</button>
+    <button class="nav-cart-btn" onclick="window.location.href='cart.html'">🛍️ <span class="cart-badge">0</span></button>
+    <button class="nav-hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <section class="order-confirmation-section">
+    <div class="confirmation-card">
+      <!-- Confetti -->
+      <div class="confetti-area" id="confetti-area"></div>
+
+      <!-- Check circle -->
+      <div class="check-circle">✓</div>
+
+      <h1 class="confirmation-title">Order Confirmed!</h1>
+      <p class="confirmation-subtitle">
+        Thank you, <strong id="conf-name">Customer</strong>! 🎉<br>
+        Your order has been placed successfully. We're preparing it with love and care.
+      </p>
+
+      <div class="order-details-grid">
+        <div class="order-detail-item">
+          <div class="order-detail-label">Order Number</div>
+          <div class="order-detail-value order-num" id="conf-order-num">HYM-00000000</div>
+        </div>
+        <div class="order-detail-item">
+          <div class="order-detail-label">Order Date</div>
+          <div class="order-detail-value" id="conf-date">—</div>
+        </div>
+        <div class="order-detail-item">
+          <div class="order-detail-label">Order Total</div>
+          <div class="order-detail-value" id="conf-total">₹0</div>
+        </div>
+        <div class="order-detail-item">
+          <div class="order-detail-label">Order Status</div>
+          <div class="order-detail-value">
+            <span class="status-badge">Confirmed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Timeline -->
+      <div style="background:var(--off-white);border-radius:var(--radius);padding:24px;margin-bottom:36px;text-align:left;">
+        <h4 style="font-family:var(--font-display);font-size:16px;margin-bottom:16px;">Estimated Delivery Timeline</h4>
+        <div style="display:flex;justify-content:space-between;position:relative;padding:0 20px;">
+          <div style="position:absolute;top:18px;left:20px;right:20px;height:3px;background:linear-gradient(90deg,var(--coral),var(--peach),var(--blush));border-radius:2px;"></div>
+          <div style="text-align:center;z-index:1;">
+            <div style="width:36px;height:36px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;margin:0 auto 8px;">✓</div>
+            <div style="font-size:12px;font-weight:600;color:var(--coral);">Confirmed</div>
+          </div>
+          <div style="text-align:center;z-index:1;">
+            <div style="width:36px;height:36px;background:var(--peach);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;margin:0 auto 8px;">📦</div>
+            <div style="font-size:12px;font-weight:600;color:var(--gray);">Packed</div>
+          </div>
+          <div style="text-align:center;z-index:1;">
+            <div style="width:36px;height:36px;background:var(--blush);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:16px;margin:0 auto 8px;">🚚</div>
+            <div style="font-size:12px;font-weight:600;color:var(--gray);">Shipped</div>
+          </div>
+          <div style="text-align:center;z-index:1;">
+            <div style="width:36px;height:36px;background:var(--light-gray);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:16px;margin:0 auto 8px;">🏠</div>
+            <div style="font-size:12px;font-weight:600;color:var(--gray);">Delivered</div>
+          </div>
+        </div>
+        <p style="text-align:center;color:var(--gray);font-size:13px;margin-top:20px;">Expected delivery in <strong>2–4 business days</strong></p>
+      </div>
+
+      <div class="confirmation-actions">
+        <a href="index.html" class="btn-primary">Continue Shopping 🛍️</a>
+        <a href="products.html" class="btn-outline" style="color:var(--dark);border-color:var(--border);">Browse More</a>
+      </div>
+
+      <p style="margin-top:24px;color:var(--gray);font-size:13px;">
+        A confirmation email will be sent to your registered email address.<br>
+        Need help? <a href="contact.html" style="color:var(--coral);">Contact us</a>
+      </p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div class="logo-icon">稀</div>
+        <span style="font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--white);">Haya<span style="color:var(--coral);">mi</span></span>
+      </div>
+      <p>Curated fashion for the modern soul.</p>
+      <div class="social-links"><a href="#" class="social-link">📸</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">📘</a></div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="category.html">Categories</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Customer Care</h5><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns</a></li><li><a href="#">Shipping</a></li></ul></div>
+    <div class="footer-col"><h5>Newsletter</h5><div class="footer-newsletter"><input type="email" placeholder="Your email address"><button>Subscribe ✨</button></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>Hayami</span>. All rights reserved.</p></div>
+</footer>
+
+<button class="scroll-top">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>
